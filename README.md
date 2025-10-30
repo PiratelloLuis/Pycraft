@@ -1,79 +1,34 @@
 # 🧠🎤 Pycraft – Integração de Voz com Servidor Minecraft Java
 
-Este projeto implementa uma integração entre **reconhecimento de voz em Python** e um **servidor Minecraft Java**, permitindo executar comandos no jogo por meio da voz.  
-Ao falar um comando, o sistema interpreta a fala, converte para texto e envia o comando correspondente ao servidor por meio do plugin Pycraft.
+Este projeto demonstra como integrar **reconhecimento de voz em Python** com um **servidor Minecraft Java**, permitindo executar ações dentro do jogo usando comandos falados.
+
+Ao falar um comando, o Python interpreta a voz, converte em texto e executa ações no servidor Minecraft.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- Reconhecimento de voz via Python
-- Interpretação de comandos falados
-- Envio de comandos diretamente para o servidor Minecraft
-- Comunicação integrada com o plugin Pycraft
-- Suporte para criação de comandos personalizados
+- Comandos de voz em **pt-BR**
+- Execução de ações dentro do Minecraft
+- Teleporte automático com palavras-chave
+- Geração de TNT via comando falado
+- Exemplo com integração MCPI
 
 ---
 
 ## 🧩 Como Funciona
 
-1. O Python escuta um comando de voz.
-2. O áudio é convertido em texto e interpretado.
-3. O sistema se comunica com o servidor Minecraft utilizando o plugin **Pycraft**.
-4. O comando é executado no jogo, acionando ações como:
-   - Dar itens
-   - Executar `/tp`, `/say`, entre outros
-   - Ativar funções personalizadas do servidor
+1. O programa escuta sua voz pelo microfone.
+2. O áudio é convertido para texto usando a API do Google Speech Recognition.
+3. Se a palavra reconhecida corresponder a uma da lista configurada, o Minecraft responde com uma ação.
+4. Caso contrário, o texto é exibido no chat do jogo.
 
 ---
 
 ## 📦 Requisitos
 
-### Python
+### ✅ Python
 - Python 3.8+
-- Biblioteca de reconhecimento de voz (por exemplo: `SpeechRecognition`)
-- Conexão com o plugin Pycraft
-
-### Servidor Minecraft
-- Minecraft Java Edition
-- Servidor Spigot/Paper
-- Plugin Pycraft instalado
-
-Repositório do plugin:  
-https://github.com/PiratelloLuis/Pycraft
-
----
-
-## 🛠️ Instalação e Configuração
-
-Em breve — pode ser preenchido conforme o projeto for documentado.  
-Se desejar, posso escrever também este passo a passo com comandos.
-
----
-
-## 📌 Exemplo de Uso
-
-> Diga: **"Dar diamantes ao jogador"**  
-→ Sistema interpreta  
-→ Envia o comando `/give <player> diamond 64` ao servidor
-
----
-
-## 🤝 Contribuições
-
-Contribuições são bem-vindas!  
-Sinta-se à vontade para abrir **Issues** e **Pull Requests** diretamente no repositório.
-
----
-
-## 📜 Licença
-
-Este projeto segue o modelo de licença definido no repositório original.  
-Verifique detalhes no link oficial.
-
----
-
-## 🔗 Créditos
-
-Projeto baseado no plugin Pycraft:  
-https://github.com/PiratelloLuis/Pycraft
+- Bibliotecas:
+  ```bash
+  pip install SpeechRecognition mcpi
